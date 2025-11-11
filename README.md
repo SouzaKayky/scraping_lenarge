@@ -1,4 +1,4 @@
-# 🧠 Projeto de Extração e Automação de Dados - Lenarge Scraping Table
+# Projeto de Extração e Automação de Dados - Lenarge Scraping Table
 
 > ⚙️ **Importante:**  
 > O processo de **extração da tabela já existe nativamente dentro do aplicativo Lenarge**.  
@@ -13,7 +13,7 @@ Portanto, este repositório pode ser considerado **a versão inicial (v1)** do p
 
 ------------------------------------------------------------------------
 
-## 🚀 Funcionalidades Principais
+## Funcionalidades Principais
 
 ### 1. Acesso e Download Automatizado (Web Scraping Simplificado)
 - O Selenium é utilizado **somente para login, navegação e download automático** da tabela disponibilizada pelo app Lenarge.  
@@ -58,7 +58,7 @@ Este projeto serve como **base de dados oficial** para:
 
 ------------------------------------------------------------------------
 
-## 🚚 Exemplo Prático de Aplicação
+## Exemplo Prático de Aplicação
 Um exemplo real de uso dos dados extraídos deste projeto ocorre em uma **tabela compartilhada com os programadores de logística de cargas**, utilizada para o **controle de paradas de caminhões para manutenção preventiva**.
 
 Nessa tabela, cada linha representa um veículo e contém:
@@ -71,7 +71,7 @@ Essa automação garante que a equipe de logística **tenha uma visão consolida
 
 ------------------------------------------------------------------------
 
-## ⚙️ Estrutura Recomendada de Pastas
+## Estrutura Recomendada de Pastas
 
     ScrapingTable/
     │
@@ -94,7 +94,7 @@ Essa automação garante que a equipe de logística **tenha uma visão consolida
 
 ------------------------------------------------------------------------
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
   Categoria                 Ferramenta
   ------------------------- -------------------------------
@@ -107,7 +107,7 @@ Essa automação garante que a equipe de logística **tenha uma visão consolida
 
 ------------------------------------------------------------------------
 
-## 🧩 Fluxo de Execução
+## Fluxo de Execução
 
 1.  **Extração:** Selenium acessa o app Lenarge, localiza e exporta a
     tabela desejada.\
@@ -122,7 +122,7 @@ Essa automação garante que a equipe de logística **tenha uma visão consolida
 
 ------------------------------------------------------------------------
 
-## 🧰 Configuração do Ambiente
+## Configuração do Ambiente
 
 1.  **Instale as dependências**
 
@@ -149,7 +149,7 @@ Essa automação garante que a equipe de logística **tenha uma visão consolida
 
 ------------------------------------------------------------------------
 
-## 🧠 Futuras Expansões
+## Futuras Expansões
 
 -   Adição de logs detalhados (logging + monitoramento).
 -   Agendamento automático com Airflow ou cron jobs.
@@ -158,7 +158,7 @@ Essa automação garante que a equipe de logística **tenha uma visão consolida
 
 ------------------------------------------------------------------------
 
-## 🧾 Licença
+## Licença
 
 Este projeto é de uso interno e educativo.\
 Desenvolvido com foco em automação e integração de dados
