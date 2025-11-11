@@ -1,70 +1,54 @@
 # 🧠 Projeto de Extração e Automação de Dados - Lenarge Scraping Table
 
 ## 📋 Descrição Geral
+Este projeto tem como objetivo **automatizar o processo de extração, manipulação, tratamento e armazenamento de dados** provenientes da aplicação **Lenarge**, utilizando **Selenium** apenas como ferramenta de **acesso e download automático** da tabela disponibilizada diretamente pelo próprio app.
 
-Este projeto tem como objetivo automatizar **a extração, manipulação,
-tratamento e armazenamento de dados** provenientes da aplicação
-**Lenarge**, utilizando **Selenium para web scraping**, manipulação de
-arquivos locais e integração com **MySQL** para persistência de dados.
+> ⚙️ **Importante:**  
+> O processo de **extração da tabela já existe nativamente dentro do aplicativo Lenarge**.  
+> O papel do Selenium neste projeto **não é extrair linha a linha** da interface, mas sim **automatizar o acesso, navegação e download** da tabela em seu formato padrão atual, garantindo consistência e periodicidade.
 
-A estrutura foi desenvolvida para permitir **reutilização modular**, de
-forma que os dados extraídos possam ser utilizados em **relatórios
-automáticos**, **subextrações específicas** e **integrações com outros
-sistemas administrativos**.
+Este projeto se diferencia do repositório **`web_scraping_v2`**, onde o Selenium é usado de forma mais profunda — lá ele **navega, coleta e reconstrói dados linha a linha** devido à ausência de uma função de exportação complexa no aplicativo.  
+Aqui, o foco é **otimizar o processo já existente** e integrá-lo a fluxos automatizados de manipulação e armazenamento.
+
+A estrutura foi desenvolvida para permitir **reutilização modular**, de forma que os dados extraídos possam ser utilizados em **relatórios automáticos**, **subextrações específicas** e **integrações com outros sistemas administrativos**.
 
 ------------------------------------------------------------------------
 
 ## 🚀 Funcionalidades Principais
 
-### 1. Extração de Dados (Web Scraping)
-
--   Extração de tabelas do app Lenarge utilizando **Selenium
-    WebDriver**.
--   Localização dinâmica de elementos com **XPath otimizados**.
--   Scroll automatizado e iteração em carrosséis e tabelas dinâmicas.
--   Armazenamento temporário em arquivos `.xlsx` ou `.csv` gerados
-    automaticamente.
+### 1. Acesso e Download Automatizado (Web Scraping Simplificado)
+- O Selenium é utilizado **somente para login, navegação e download automático** da tabela disponibilizada pelo app Lenarge.  
+- O download segue um padrão de nome (`programacao--YYYY-MM-DD...`) e é salvo automaticamente na pasta de downloads.  
+- O script identifica o arquivo mais recente e o move para o diretório de processamento.  
+- Este fluxo garante **extrações padronizadas e reprodutíveis**, sem depender de ações manuais.
 
 ### 2. Manipulação de Pastas e Arquivos
-
--   Função `manipulacao_path()` com lógica iterativa e validada.
--   Verificação das variáveis de ambiente (`PATH_DOWNLOAD`, `PATH_DATA`)
-    com tratamento de erro profissional.
--   Identificação automática do arquivo mais recente baseado no padrão
-    de nomeação.
--   Movimentação segura do arquivo mais recente para o diretório de
-    destino.
--   Geração de nomes padronizados e limpos com `safe_filename()`.
+- Função `manipulacao_path()` com estrutura iterativa e validações robustas.  
+- Verificação das variáveis de ambiente (`PATH_DOWNLOAD`, `PATH_DATA`).  
+- Criação de diretórios ausentes e tratamento de erros padronizado.  
+- Movimentação segura do arquivo mais recente, renomeando conforme timestamp.  
+- Garantia de que apenas o último arquivo modificado é considerado válido.
 
 ### 3. Tratamento e Padronização dos Dados
-
--   Normalização de colunas com nomes consistentes e legíveis.
--   Conversão de tipos (string → int, float, datetime) para
-    compatibilidade SQL.
--   Remoção de duplicatas e registros inconsistentes.
--   Enriquecimento com colunas derivadas (ex: data de extração, fonte,
-    identificadores únicos).
--   Transformação em formato tabular ideal para uso em bancos
-    relacionais.
+- Padronização de nomes de colunas e normalização de formatos.  
+- Conversões seguras de tipo (string → numérico, datetime).  
+- Eliminação de duplicatas e inconsistências.  
+- Enriquecimento com colunas de metadados (ex: data de extração, fonte, id único).  
+- Estrutura final ideal para inserção em bancos relacionais (MySQL).
 
 ### 4. Integração com Banco de Dados MySQL
-
--   Conexão via `mysql.connector` ou `SQLAlchemy`.
--   Criação automática de tabelas se não existirem.
--   Inserção incremental (append) de novos dados sem sobrescrever
-    históricos.
--   Logs de execução e falhas de conexão.
--   Scripts configuráveis para rodar localmente ou em servidores
-    remotos.
+- Conexão via `mysql.connector` ou `SQLAlchemy`.  
+- Criação automática de tabelas (DDL dinâmica).  
+- Inserção incremental, evitando sobrescrever históricos.  
+- Logs detalhados de execução e falhas.  
+- Compatível com execuções locais e remotas (via script ou automação agendada).
 
 ### 5. Reutilização e Modularidade
-
--   O projeto foi estruturado para permitir uso em **outros scripts e
-    automações**, como:
-    -   Geração de relatórios diários ou semanais;
-    -   Subextrações de dados específicas (clientes, transportadoras,
-        notas, etc);
-    -   Dashboards e integrações com Power BI ou Google Data Studio.
+Este projeto serve como **base de dados oficial** para:
+- Relatórios e dashboards gerenciais;
+- Subextrações específicas (clientes, transportadoras, notas, etc.);
+- Integrações com pipelines de automação financeira e operacional;
+- Scripts complementares que utilizam os dados baixados e tratados.
 
 ------------------------------------------------------------------------
 
