@@ -9,7 +9,7 @@ Enquanto este projeto (v1) automatiza o **download direto** da tabela exportáve
 
 Portanto, este repositório pode ser considerado **a versão inicial (v1)** do pipeline de extração, com base sólida e modular, sobre a qual o **v2 foi evoluído** para resolver limitações de acessibilidade e granularidade dos dados.
 
-[Repositório scraping_lenarge_v2](https://github.com/usuario/scraping_lenarge_v2)
+[Repositório scraping_lenarge_v2](https://github.com/SouzaKayky/scraping_lenarge_v2)
 
 ------------------------------------------------------------------------
 
