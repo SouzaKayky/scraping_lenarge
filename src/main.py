@@ -1,11 +1,22 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service   
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
+from pathlib import Path
+import os
+from dotenv import load_dotenv
 
-from config.settings import ( 
-                             email_login, senha_login )
-                             
+from utils.extract_table import download_table
+from utils.look_path import manipulacao_path, remove_files
+from utils.compress_csv import compress_table
+from utils.append_sql import save_sql
+
+load_dotenv()
+
+path_data = Path(os.getenv("PATH_DATA"))
+path_download = Path(os.getenv("PATH_DOWNLOAD"))
+
+download_table()
+manipulacao_path()
+remove_files()
+compress_table(path_data)
+
+data = os.getenv("FILE")
+
+# save_sql(data)
