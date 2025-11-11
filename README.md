@@ -29,11 +29,18 @@ Portanto, este repositório pode ser considerado **a versão inicial (v1)** do p
 - Garantia de que apenas o último arquivo modificado é considerado válido.
 
 ### 3. Tratamento e Padronização dos Dados
-- Padronização de nomes de colunas e normalização de formatos.  
-- Conversões seguras de tipo (string → numérico, datetime).  
-- Eliminação de duplicatas e inconsistências.  
-- Enriquecimento com colunas de metadados (ex: data de extração, fonte, id único).  
+- Detecção automática do delimitador e correção de encoding (`UTF-8`).
+- Remoção de colunas vazias, duplicadas e dados redundantes.
+- Padronização de strings e normalização de tipos numéricos e categóricos.
+- Conversão de dados para tipos otimizados (`float32`, `int32`, `category`).  
 - Estrutura final ideal para inserção em bancos relacionais (MySQL).
+
+### Resultado Exibido
+
+Linhas totais        : 1952
+Tamanho original     : 0.53 MB
+Tamanho otimizado    : 0.48 MB
+Redução de tamanho   : 10.6%
 
 ### 4. Integração com Banco de Dados MySQL
 - Conexão via `mysql.connector` ou `SQLAlchemy`.  
