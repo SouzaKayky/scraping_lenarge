@@ -96,14 +96,14 @@ Essa automação garante que a equipe de logística **tenha uma visão consolida
 
 ## Tecnologias Utilizadas
 
-  Categoria                 Ferramenta
-  ------------------------- -------------------------------
-  Web Scraping              Selenium, XPath, ChromeDriver
-  Manipulação de Arquivos   pathlib, shutil
-  Tratamento de Dados       pandas, datetime
-  Banco de Dados            MySQL, SQLAlchemy
-  Automação                 Python 3.11+
-  Ambiente                  `.env`, dotenv
+  | Categoria               | Ferramenta                          |
+|--------------------------|-------------------------------------|
+| **Web Scraping**         | Selenium, XPath, ChromeDriver       |
+| **Manipulação de Arquivos** | pathlib, shutil                   |
+| **Tratamento de Dados**  | pandas, datetime                    |
+| **Banco de Dados**       | MySQL, SQLAlchemy                   |
+| **Automação**            | Python 3.11+                        |
+| **Ambiente**             | `.env`, dotenv                      |
 
 ------------------------------------------------------------------------
 
