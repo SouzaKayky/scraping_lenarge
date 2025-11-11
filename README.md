@@ -1,16 +1,15 @@
 # 🧠 Projeto de Extração e Automação de Dados - Lenarge Scraping Table
 
-## 📋 Descrição Geral
-Este projeto tem como objetivo **automatizar o processo de extração, manipulação, tratamento e armazenamento de dados** provenientes da aplicação **Lenarge**, utilizando **Selenium** apenas como ferramenta de **acesso e download automático** da tabela disponibilizada diretamente pelo próprio app.
-
 > ⚙️ **Importante:**  
 > O processo de **extração da tabela já existe nativamente dentro do aplicativo Lenarge**.  
-> O papel do Selenium neste projeto **não é extrair linha a linha** da interface, mas sim **automatizar o acesso, navegação e download** da tabela em seu formato padrão atual, garantindo consistência e periodicidade.
+> O Selenium neste projeto **não realiza a coleta linha a linha**, mas sim **automatiza o login, a navegação e o download da tabela de dados** no formato padrão disponibilizado pelo sistema.
 
-Este projeto se diferencia do repositório **`web_scraping_v2`**, onde o Selenium é usado de forma mais profunda — lá ele **navega, coleta e reconstrói dados linha a linha** devido à ausência de uma função de exportação complexa no aplicativo.  
-Aqui, o foco é **otimizar o processo já existente** e integrá-lo a fluxos automatizados de manipulação e armazenamento.
+Este projeto se diferencia do repositório **`web_scraping_v2`**, que foi criado posteriormente.  
+Enquanto este projeto (v1) automatiza o **download direto** da tabela exportável, o **v2 surgiu da necessidade de extrair dados linha a linha via Selenium** — pois, em certas situações, **o app não permitia a exportação complexa ou completa**, dificultando o tratamento posterior.
 
-A estrutura foi desenvolvida para permitir **reutilização modular**, de forma que os dados extraídos possam ser utilizados em **relatórios automáticos**, **subextrações específicas** e **integrações com outros sistemas administrativos**.
+Portanto, este repositório pode ser considerado **a versão inicial (v1)** do pipeline de extração, com base sólida e modular, sobre a qual o **v2 foi evoluído** para resolver limitações de acessibilidade e granularidade dos dados.
+
+[Repositório scraping_lenarge_v2](https://github.com/usuario/scraping_lenarge_v2)
 
 ------------------------------------------------------------------------
 
@@ -49,6 +48,19 @@ Este projeto serve como **base de dados oficial** para:
 - Subextrações específicas (clientes, transportadoras, notas, etc.);
 - Integrações com pipelines de automação financeira e operacional;
 - Scripts complementares que utilizam os dados baixados e tratados.
+
+------------------------------------------------------------------------
+
+## 🚚 Exemplo Prático de Aplicação
+Um exemplo real de uso dos dados extraídos deste projeto ocorre em uma **tabela compartilhada com os programadores de logística de cargas**, utilizada para o **controle de paradas de caminhões para manutenção preventiva**.
+
+Nessa tabela, cada linha representa um veículo e contém:
+- **Placa do caminhão**;  
+- **Responsável atual** (progamador de carga);  
+- **Motorista logado** no momento da extração;  
+- **Informações adicionais** .
+
+Essa automação garante que a equipe de logística **tenha uma visão consolidada e atualizada** dos caminhões, simplificando o processo de **cobrança e controle de paradas** para manutenção preventiva e corretiva.
 
 ------------------------------------------------------------------------
 
