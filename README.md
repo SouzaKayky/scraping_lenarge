@@ -5,7 +5,7 @@
 > O Selenium neste projeto **não realiza a coleta linha a linha**, mas sim **automatiza o login, a navegação e o download da tabela de dados** no formato padrão disponibilizado pelo sistema.
 
 Este projeto se diferencia do repositório **`web_scraping_v2`**, que foi criado posteriormente.  
-Enquanto este projeto (v1) automatiza o **download direto** da tabela exportável, o **v2 surgiu da necessidade de extrair dados linha a linha via Selenium** — pois, em certas situações, **o app não permitia a exportação complexa ou completa**, dificultando o tratamento posterior.
+Enquanto este projeto (v1) automatiza o **download direto** da tabela exportável, o **v2 surgiu da necessidade de extrair dados linha a linha via Selenium** pois, em certas situações, **o app não permitia a exportação complexa ou completa**, dificultando o tratamento posterior.
 
 Portanto, este repositório pode ser considerado **a versão inicial (v1)** do pipeline de extração, com base sólida e modular, sobre a qual o **v2 foi evoluído** para resolver limitações de acessibilidade e granularidade dos dados.
 
